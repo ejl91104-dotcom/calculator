@@ -30,7 +30,7 @@ class AdditionCalculator(QWidget):
 
         self.add_button = QPushButton('add', self)
 
-        self.result_label = QLabel('결과가 여기에 표시됩니다.', self)
+        self.result_label = QLabel('result', self)
 
         # 레이아웃 설정
         vbox = QVBoxLayout()
@@ -55,7 +55,7 @@ class AdditionCalculator(QWidget):
             num1 = float(num1_text)
             num2 = float(num2_text)
             result = num1 + num2
-            self.result_label.setText(f'결과: {result}')
+            self.result_label.setText(f'result: {result}')
         except ValueError:
             QMessageBox.warning(self, '입력 오류', '유효한 숫자를 입력해주세요.')
             self.result_label.setText('결과: 숫자를 입력해주세요.')
